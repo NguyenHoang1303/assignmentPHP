@@ -21,7 +21,7 @@ class ApartmentsController extends Controller
     }
 
     function getAll(){
-        $apartments = DB::table('buildings')->get();
+        $apartments = DB::table('apartments')->get();
         return view('realEstate.template.home-page',[
             'apartments'=>$apartments
         ]);
