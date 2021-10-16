@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ApartmentsController;
+use App\Http\Controllers\BuildingController;
+use App\Models\Apartments;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/form',[ApartmentsController::class,'getForm']);
+Route::post('/form',[ApartmentsController::class,'creat'])->name('create.building');
+Route::get('/home',[ApartmentsController::class,'getAll'])->name('create.building');
